@@ -17,3 +17,15 @@ document.addEventListener('click', (e) => {
     document.querySelectorAll('.team-member-about.bio-open').forEach(el => el.classList.remove('bio-open'));
   }
 });
+// Hero slideshow: change photo every 3 seconds
+(function () {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (slides.length < 2) return;
+
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 3000);
+})();

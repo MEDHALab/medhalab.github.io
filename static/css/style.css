@@ -2861,3 +2861,13 @@ main {
         width: 100%;
     }
 }
+
+.hero-slideshow {
+    flex: 0 0 30%;
+    aspect-ratio: 3 / 2;
+    background: #fff;
+}
+
+.hero-slide {
+    object-fit: contain;
+}

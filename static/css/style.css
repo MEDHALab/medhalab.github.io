@@ -270,6 +270,8 @@ body {
     font-size: 1.3rem;
     font-weight: 400;
     line-height: 1.65;
+    text-align: justify;
+    hyphens: auto;
 }
 
 .hero-actions {

@@ -51,7 +51,18 @@
 
 </section>
 
+        {# Edit this list to change the photos (files live in static/img) #}
+        {% set slides = ['slide1.jpg', 'slide2.jpg'] %}
 
+        <div class="hero-slideshow">
+            {% for s in slides %}
+            <img
+                class="hero-slide{% if loop.first %} active{% endif %}"
+                src="{{ url_for('static', filename='img/' ~ s) }}"
+                alt="MEDHA Lab photo {{ loop.index }}"
+            >
+            {% endfor %}
+        </div>
 <!-- ========================================
      Main Content
      ======================================== -->

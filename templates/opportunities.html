@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="container opportunities-page">
+
+    <div class="opportunities-header">
+
+        <h1>Opportunities</h1>
+
+        <p>
+            We always welcome motivated researchers and students who are
+            interested in our
+            <a href="{{ url_for('research') }}">research</a>.
+        </p>
+
+    </div>
+
+
+    <div class="opportunities-list">
+
+
+        <!-- Postdoctoral Fellows -->
+
+        <article class="opportunity-card">
+
+            <div class="opportunity-content">
+
+                <h2>
+                    Postdoctoral Fellows
+                </h2>
+
+                <p>
+                    Topics and qualifications will be announced for available
+                    positions. Stay tuned for updates on our
+                    <a
+                        href="{{ url_for('news') }}"
+                        class="opportunity-inline-link"
+                    >
+                        News
+                    </a>
+                    page and LinkedIn. Interested candidates are encouraged
+                    to send their CV and research statement.
+                </p>
+
+                <a
+                    href="mailto:punitkumar@ntu.edu.sg"
+                    class="opportunity-link"
+                >
+                    Email your application
+                    <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="opportunity-image opportunity-image-postdoc">
+
+                <img
+                    src="{{ url_for('static', filename='img/microscope.png') }}"
+                    alt="Microscope"
+                >
+
+            </div>
+
+        </article>
+
+
+        <!-- PhD Students -->
+
+        <article class="opportunity-card">
+
+            <div class="opportunity-content">
+
+                <h2>
+                    PhD Students
+                </h2>
+
+                <p>
+                    Research opportunities are available for motivated
+                    candidates interested in the group's research areas.
+                    Applicants should follow the
+                    <a
+                        href="https://www.ntu.edu.sg/education/graduate-programme/mae-phd"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="opportunity-inline-link"
+                    >
+                        NTU Graduate Programme
+                    </a>
+                    application requirements.
+                </p>
+
+                <a
+                    href="mailto:punitkumar@ntu.edu.sg"
+                    class="opportunity-link"
+                >
+                    Enquire about PhD opportunities
+                    <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="opportunity-image opportunity-image-phd">
+
+                <img
+                    src="{{ url_for('static', filename='img/education.png') }}"
+                    alt="Education"
+                >
+
+            </div>
+
+        </article>
+
+
+        <!-- Master's Students / Interns -->
+
+        <article class="opportunity-card">
+
+            <div class="opportunity-content">
+
+                <h2>
+                    Master's Students / Interns
+                </h2>
+
+                <p>
+                    Short research projects may be available for students
+                    with relevant academic backgrounds and research interests.
+                    Please include your CV when making an enquiry.
+                </p>
+
+                <a
+                    href="mailto:punitkumar@ntu.edu.sg"
+                    class="opportunity-link"
+                >
+                    Enquire about opportunities
+                    <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="opportunity-image opportunity-image-masters">
+
+                <img
+                    src="{{ url_for('static', filename='img/laptop.png') }}"
+                    alt="Laptop"
+                >
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <!-- Information note -->
+
+    <div class="opportunities-note">
+
+        <span class="opportunities-note-icon">
+            i
+        </span>
+
+        <p>
+            For formal applications, please also check
+            <a
+                href="https://www.ntu.edu.sg/mae/admissions/graduate-programmes?listingKeyword=&disciplines=all&programmelevels=all&programmetypes=all&page=1"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                NTU's official openings and admissions portals
+            </a>.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

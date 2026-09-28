@@ -1,0 +1,269 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- ========================================
+     Hero
+     ======================================== -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner container">
+
+        <div class="hero-content">
+
+            <div class="hero-accent"></div>
+
+            <p class="hero-welcome">
+                Welcome to the
+            </p>
+
+            <h1>
+                MEDHA Lab
+            </h1>
+
+            <p class="hero-university">
+                at Nanyang Technological University, Singapore,
+                led by <strong>Punit Kumar</strong>
+            </p>
+
+            <p class="hero-description">
+                We push the boundaries of materials by investigating
+                how high-entropy alloys fracture and evolve at the
+                microstructural level under extreme conditions, using
+                advanced manufacturing techniques and integrating with AI/ML to develop resilient, next-generation
+                materials.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="{{ url_for('research') }}" class="btn btn-hero">
+                    Explore Our Research
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     Main Content
+     ======================================== -->
+
+<section class="container home-content">
+
+    <!-- About + Latest News -->
+
+    <div class="row g-4 about-news-row">
+
+        <!-- About -->
+
+        <div class="col-lg-8">
+
+            <div class="about-section">
+
+                <h2>
+                    Principal Investigator
+                </h2>
+
+                <div class="pi-profile">
+
+                    <img
+                        src="{{ url_for('static', filename='img/punit sir.jpg') }}"
+                        alt="PI"
+                        class="avatar border"
+                    >
+
+                    <div class="pi-details">
+
+                        <div class="pi-name">
+                            {{ pi_name }}
+                        </div>
+
+                        <div class="pi-title">
+                            {{ pi_title }}<br>
+                            {{ institution }}
+                        </div>
+
+                        <a href="{{ url_for('team') }}" class="about-read-more">
+                            Read more
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="{{ ntu_profile_link }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="about-read-more"
+                        >
+                            Faculty Profile
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Latest News -->
+
+        <div class="col-lg-4">
+
+            <div class="latest-news-section">
+
+                <h2>
+                    Latest News
+                </h2>
+
+                <div class="list-group">
+
+                    {% for item in news[:2] %}
+
+                    <a
+                        class="list-group-item list-group-item-action"
+                        href="{{ url_for('news') }}"
+                    >
+
+                        <div class="small text-muted">
+                            {{ item.date }}
+                        </div>
+
+                        <div class="fw-semibold">
+                            {{ item.title }}
+                        </div>
+
+                    </a>
+
+                    {% else %}
+
+                    <div class="text-muted">
+                        No news yet. Check back soon.
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+
+                <a href="{{ url_for('news') }}" class="d-inline-block mt-2 small">
+                    More news →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Explore -->
+
+    <div class="explore-section">
+
+        <h2>
+            Explore
+        </h2>
+
+        <div class="explore-grid">
+
+            <div class="explore-item">
+
+                <div class="card-icon">
+                    🔬
+                </div>
+
+                <h5>
+                    Our Research
+                </h5>
+
+                <p>
+                    Materials for extreme environments,
+                    fracture mechanics, and data driven design.
+                </p>
+
+                <a href="{{ url_for('research') }}">
+                    Learn more →
+                </a>
+
+            </div>
+
+
+            <div class="explore-item">
+
+                <div class="card-icon">
+                    👥
+                </div>
+
+                <h5>
+                    Team
+                </h5>
+
+                <p>
+                    Meet the people behind our work.
+                </p>
+
+                <a href="{{ url_for('team') }}">
+                    Meet the team →
+                </a>
+
+            </div>
+
+
+            <div class="explore-item">
+
+                <div class="card-icon">
+                    📄
+                </div>
+
+                <h5>
+                    Publications
+                </h5>
+
+                <p>
+                    Browse our latest papers and preprints.
+                </p>
+
+                <a href="{{ url_for('publications') }}">
+                    See papers →
+                </a>
+
+            </div>
+
+
+            <div class="explore-item">
+
+                <div class="card-icon">
+                    📢
+                </div>
+
+                <h5>
+                    Opportunities
+                </h5>
+
+                <p>
+                    Open positions for postdocs, PhDs, and interns.
+                </p>
+
+                <a href="{{ url_for('opportunities') }}">
+                    Join us →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

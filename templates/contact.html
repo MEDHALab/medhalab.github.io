@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="container contact-page" style="max-width: 900px;">
+    
+    <h1>Contact</h1>
+
+    <p>
+        For general enquiries and prospective students:
+        <a href="mailto:{{ pi_email }}">{{ pi_email }}</a>
+    </p>
+
+    <p>
+        Office: {{ address }}
+    </p>
+
+    <div class="mt-4">
+
+        <div class="ratio ratio-4x3 border rounded">
+            <iframe
+                src="https://maps.google.com/maps?q=ntu%20singapore&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                loading="lazy"
+            ></iframe>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

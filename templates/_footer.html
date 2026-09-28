@@ -1,0 +1,68 @@
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row g-3">
+
+            <div class="col-md-6">
+
+                <h5 class="mb-2">
+                    MEDHA Lab
+                </h5>
+
+                <div>
+                    {{ institution }}
+                </div>
+
+                <div>
+                    {{ address }}
+                </div>
+
+                <div>
+                    Email:
+                    <a href="mailto:{{ pi_email }}">
+                        {{ pi_email }}
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 text-md-end">
+
+                <div class="small">
+                    Links:
+                </div>
+
+                <a
+                    href="{{ scholar_link }}"
+                    target="_blank"
+                    class="me-2"
+                >
+                    Google Scholar
+                </a>
+
+                <a
+                    href="{{ ntu_profile_link }}"
+                    target="_blank"
+                >
+                    NTU Profile
+                </a>
+
+                <div class="small mt-2">
+                    ©
+                    <span id="y"></span>
+                    MEDHA Lab
+                    · All rights reserved.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+
+</footer>

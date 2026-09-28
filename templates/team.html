@@ -1,0 +1,523 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="container py-5 team-page">
+
+    <h1>Meet our Team</h1>
+
+
+    <!-- Principal Investigator -->
+
+    <div class="row g-4 align-items-start mt-1">
+
+        <div class="col-auto">
+
+            <div class="team-pi-label">
+                Principal Investigator
+            </div>
+
+            <img
+                src="{{ url_for('static', filename=team.pi.photo) }}"
+                class="avatar border"
+                alt="PI"
+            >
+
+        </div>
+
+
+        <div class="col team-pi-details">
+
+            <h4 class="mb-0">
+                {{ team.pi.name }}
+            </h4>
+
+            <div class="text-muted">
+                {{ team.pi.title }}
+            </div>
+
+
+            <div class="team-pi-contact">
+
+                <span class="team-pi-contact-item">
+
+                    <span class="team-pi-contact-label">
+                        Email :
+                    </span>
+
+                    <a href="mailto:{{ team.pi.email }}">
+                        {{ team.pi.email }}
+                    </a>
+
+                </span>
+
+
+                <span class="team-pi-contact-divider"></span>
+
+
+                <span class="team-pi-contact-item">
+
+                    <span class="team-pi-contact-label">
+                        Office :
+                    </span>
+
+                    <span>
+                        {{ team.pi.office }}
+                    </span>
+
+                </span>
+
+
+                <span class="team-pi-contact-divider"></span>
+
+
+                <span class="team-pi-contact-item">
+
+                    <span class="team-pi-contact-label">
+                        LinkedIn :
+                    </span>
+
+                    <a
+                        href="https://www.linkedin.com/in/punit-k-4a187771/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Click here
+                    </a>
+
+                </span>
+
+            </div>
+
+
+            <p class="mt-2">
+                {{ team.pi.bio }}
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <hr class="my-4">
+
+
+    <!-- Team Members -->
+
+    <div class="team-category-grid">
+
+
+        <!-- LEFT COLUMN -->
+
+        <div class="team-category-column">
+
+
+            <!-- Postdoctoral Researchers -->
+
+            <div class="team-category">
+
+                <h5 class="team-category-title">
+                    Postdoctoral Researchers
+                </h5>
+
+
+                {% set members = team.members.get('Postdoctoral Researchers', []) %}
+
+                {% if members %}
+
+                    <div class="team-member-grid">
+
+                        {% for m in members %}
+
+                            <div class="team-member-item">
+
+                                <div class="team-member-card">
+
+                                    <img
+                                        src="{{ url_for('static', filename=m.photo or 'img/pi-placeholder.jpg') }}"
+                                        class="team-member-photo"
+                                        alt="{{ m.name }}"
+                                    >
+
+
+                                    <div class="team-member-info">
+
+                                        <h5>
+                                            {{ m.name }}
+                                        </h5>
+
+
+                                        {% if m.email %}
+
+                                            <a
+                                                href="mailto:{{ m.email }}"
+                                                class="team-member-email"
+                                            >
+                                                {{ m.email }}
+                                            </a>
+
+                                        {% else %}
+
+                                            <span class="team-member-email">
+                                                Email
+                                            </span>
+
+                                        {% endif %}
+
+
+                                        <a
+                                            href="https://www.linkedin.com/in/tiffany-wu-407943272"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="team-member-linkedin"
+                                        >
+                                            LinkedIn: Click here
+                                        </a>
+
+
+                                        <div class="team-member-about">
+
+                                            <button
+                                                type="button"
+                                                class="team-member-about-trigger"
+                                                aria-label="Show about {{ m.name }}"
+                                            >
+                                                About
+                                            </button>
+
+
+                                            <div class="team-member-bio">
+
+                                                {% if m.bio is string %}
+
+                                                    {{ m.bio }}
+
+                                                {% else %}
+
+                                                    {% for paragraph in m.bio %}
+                                                        <p>{{ paragraph }}</p>
+                                                    {% endfor %}
+
+                                                {% endif %}
+
+
+                                                {% if m.hobbies %}
+
+                                                    <p class="team-member-hobbies">
+                                                        <strong>Hobbies:</strong>
+                                                        {{ m.hobbies }}
+                                                    </p>
+
+                                                {% endif %}
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+
+                {% else %}
+
+                    <div class="text-muted small">
+                        No entries yet.
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- MSc Students -->
+
+            <div class="team-category">
+
+                <h5 class="team-category-title">
+                    MSc Students
+                </h5>
+
+
+                {% set members = team.members.get('MSc Students', []) %}
+
+                {% if members %}
+
+                    <div class="team-member-grid">
+
+                        {% for m in members %}
+
+                            <div class="team-member-item">
+
+                                <div class="team-member-card">
+
+                                    <img
+                                        src="{{ url_for('static', filename=m.photo or 'img/pi-placeholder.jpg') }}"
+                                        class="team-member-photo"
+                                        alt="{{ m.name }}"
+                                    >
+
+
+                                    <div class="team-member-info">
+
+                                        <h5>
+                                            {{ m.name }}
+                                        </h5>
+
+
+                                        {% if m.email %}
+
+                                            <a
+                                                href="mailto:{{ m.email }}"
+                                                class="team-member-email"
+                                            >
+                                                {{ m.email }}
+                                            </a>
+
+                                        {% else %}
+
+                                            <span class="team-member-email">
+                                                Email
+                                            </span>
+
+                                        {% endif %}
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+
+                {% else %}
+
+                    <div class="text-muted small">
+                        No entries yet.
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT COLUMN -->
+
+        <div class="team-category-column">
+
+
+            <!-- PhD Students -->
+
+            <div class="team-category">
+
+                <h5 class="team-category-title">
+                    PhD Students
+                </h5>
+
+
+                {% set members = team.members.get('PhD Students', []) %}
+
+                {% if members %}
+
+                    <div class="team-member-grid">
+
+                        {% for m in members %}
+
+                            <div class="team-member-item">
+
+                                <div class="team-member-card">
+
+                                    <img
+                                        src="{{ url_for('static', filename=m.photo or 'img/pi-placeholder.jpg') }}"
+                                        class="team-member-photo"
+                                        alt="{{ m.name }}"
+                                    >
+
+
+                                    <div class="team-member-info">
+
+                                        <h5>
+                                            {{ m.name }}
+                                        </h5>
+
+
+                                        {% if m.email %}
+
+                                            <a
+                                                href="mailto:{{ m.email }}"
+                                                class="team-member-email"
+                                            >
+                                                {{ m.email }}
+                                            </a>
+
+                                        {% else %}
+
+                                            <span class="team-member-email">
+                                                Email
+                                            </span>
+
+                                        {% endif %}
+
+
+                                        {% if m.name == 'Fahad Mohammed' %}
+
+                                            <a
+                                                href="https://uk.linkedin.com/in/mohammedfahad68"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="team-member-linkedin"
+                                            >
+                                                LinkedIn: Click here
+                                            </a>
+
+                                        {% endif %}
+
+
+                                        <div class="team-member-about">
+
+                                            <button
+                                                type="button"
+                                                class="team-member-about-trigger"
+                                                aria-label="Show about {{ m.name }}"
+                                            >
+                                                About
+                                            </button>
+
+
+                                            <div class="team-member-bio">
+
+                                                {% if m.bio is string %}
+
+                                                    {{ m.bio }}
+
+                                                {% else %}
+
+                                                    {% for paragraph in m.bio %}
+                                                        <p>{{ paragraph }}</p>
+                                                    {% endfor %}
+
+                                                {% endif %}
+
+
+                                                {% if m.hobbies %}
+
+                                                    <p class="team-member-hobbies">
+                                                        <strong>Hobbies:</strong>
+                                                        {{ m.hobbies }}
+                                                    </p>
+
+                                                {% endif %}
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+
+                {% else %}
+
+                    <div class="text-muted small">
+                        No entries yet.
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- Undergraduate Students -->
+
+            <div class="team-category">
+
+                <h5 class="team-category-title">
+                    Undergraduate Students
+                </h5>
+
+
+                {% set members = team.members.get('Undergraduate Students', []) %}
+
+                {% if members %}
+
+                    <div class="team-member-grid team-undergraduate-grid">
+
+                        {% for m in members %}
+
+                            <div class="team-member-item">
+
+                                <div class="team-member-card">
+
+                                    <img
+                                        src="{{ url_for('static', filename=m.photo or 'img/pi-placeholder.jpg') }}"
+                                        class="team-member-photo"
+                                        alt="{{ m.name }}"
+                                    >
+
+
+                                    <div class="team-member-info">
+
+                                        <h5>
+                                            {{ m.name }}
+                                        </h5>
+
+
+                                        {% if m.email %}
+
+                                            <a
+                                                href="mailto:{{ m.email }}"
+                                                class="team-member-email"
+                                            >
+                                                {{ m.email }}
+                                            </a>
+
+                                        {% else %}
+
+                                            <span class="team-member-email">
+                                                Email
+                                            </span>
+
+                                        {% endif %}
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+
+                {% else %}
+
+                    <div class="text-muted small">
+                        No entries yet.
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

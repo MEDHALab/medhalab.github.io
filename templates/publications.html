@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="container publications-page">
+
+    <div class="publications-header">
+        <h1>Publications</h1>
+    </div>
+
+    <div class="publications-list">
+
+        {% for publication in publications %}
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                {{ loop.index }}.
+            </div>
+
+            <div class="publication-content">
+
+                <p class="publication-title">
+                    {{ publication.title }}.
+                </p>
+
+                <p class="publication-details">
+                    <em>{{ publication.journal }} {{ publication.details }}.</em>
+                </p>
+
+                <p class="publication-authors">
+                    {{ publication.authors }}
+                </p>
+
+                <p class="publication-doi">
+                    DOI:
+                    <a
+                        href="{{ publication.doi }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {{ publication.doi }}
+                    </a>
+                </p>
+
+            </div>
+
+        </article>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

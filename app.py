@@ -107,7 +107,7 @@ TEAM = {
                 "email": "FAHAD002@e.ntu.edu.sg",
                 "photo": "img/Fahad.jpg",
                 "bio": [
-                    "Fahad Mohammed completed his B.Tech in Metallurgical and Materials Engineering from the National Institute of Technology, Andhra Pradesh, India (2021–2025), where he conducted heat treatment processes, metallographic analysis, and mechanical testing of materials.",
+                    "Fahad Mohammed graduated his B.Tech in Metallurgical and Materials Engineering from the National Institute of Technology, Andhra Pradesh, India (2021–2025), where he conducted heat treatment processes, metallographic analysis, and mechanical testing of materials.",
 
                     "He went on to pursue his master's in Advanced Composites at the University of Bristol, United Kingdom (2025–2026), where his research with GKN Aerospace focused on defect-driven failure in bonded composite joints using FEA, and he contributed to publications and conferences with TU Delft, Netherlands, and the University of the West of England, UK.",
 

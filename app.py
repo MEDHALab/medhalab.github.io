@@ -18,6 +18,12 @@ SITE = {
 
 NEWS = [
     {
+    "date": "2026-10-01",
+    "title": "Assistant Professor Punit Kumar Named Among 35 Innovators Under 35",
+    "summary": "NTU MAE congratulates Assistant Professor Punit Kumar on being recognised in MIT Technology Review Asia Pacific's 35 Innovators Under 35 list.",
+    "link": "https://www.ntu.edu.sg/mae/news-events/news/detail/assistant-professor-punit-kumar-named-among-35-innovators-under-35"
+    },
+    {
         "date": "2026-08-20",
         "title": "We welcome Dr. Tiffany Wu as our Postdoctoral Researcher",
         "summary": "Dr. Tiffany Wu joins MEDHA Lab from Northwestern University after completing a year of postdoctoral research, bringing valuable research experience in advanced alloy design, additive manufacturing, and materials characterization."

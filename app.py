@@ -20,7 +20,7 @@ NEWS = [
     {
     "date": "2026-10-01",
     "title": "Assistant Professor Punit Kumar Named Among 35 Innovators Under 35",
-    "summary": "We are very happy to announce that Assistant Professor Punit Kumar has been recognised in MIT Technology Review Asia Pacific's 35 Innovators Under 35 list for his work on developing stronger and tougher materials for extreme environments.",
+    "summary": "A proud moment for MEDHA Lab! 🎉 Assistant Professor Punit Kumar has been recognised in MIT Technology Review Asia Pacific's 35 Innovators Under 35 list for his work on developing stronger and tougher materials for extreme environments.",
     "link": "https://www.ntu.edu.sg/mae/news-events/news/detail/assistant-professor-punit-kumar-named-among-35-innovators-under-35"
     },
     {

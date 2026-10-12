@@ -1,3 +1,4 @@
+```html
 {% extends 'base.html' %}
 
 {% block content %}
@@ -63,6 +64,7 @@
     </div>
 
 </section>
+
 <!-- ========================================
      Main Content
      ======================================== -->
@@ -125,7 +127,6 @@
 
         </div>
 
-
         <!-- Latest News -->
 
         <div class="col-lg-4">
@@ -150,7 +151,11 @@
                         </div>
 
                         <div class="fw-semibold">
-                            {{ item.title }}
+                            {% if "MEDHA Lab Is Hiring" in item.title %}
+                                <span class="hiring-highlight">MEDHA Lab Is Hiring</span>{{ item.title.replace("MEDHA Lab Is Hiring", "") }}
+                            {% else %}
+                                {{ item.title }}
+                            {% endif %}
                         </div>
 
                     </a>
@@ -174,7 +179,6 @@
         </div>
 
     </div>
-
 
     <!-- Explore -->
 
@@ -207,7 +211,6 @@
 
             </div>
 
-
             <div class="explore-item">
 
                 <div class="card-icon">
@@ -228,7 +231,6 @@
 
             </div>
 
-
             <div class="explore-item">
 
                 <div class="card-icon">
@@ -248,7 +250,6 @@
                 </a>
 
             </div>
-
 
             <div class="explore-item">
 
@@ -277,3 +278,4 @@
 </section>
 
 {% endblock %}
+```

@@ -1258,7 +1258,7 @@ body {
 .team-page > h1 {
     text-align: center;
     margin-top: -20px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     font-weight: 800;
 
     background: linear-gradient(
@@ -1269,26 +1269,21 @@ body {
         #00796b,
         #990000
     );
-    background-size: 300% auto;
+    background-size: 300% 100%;
 
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
 
-    animation: teamHeadingColors 5s ease-in-out infinite;
+    animation: teamHeadingColors 5s linear infinite;
 }
 
 @keyframes teamHeadingColors {
-    0% {
+    from {
         background-position: 0% center;
     }
-
-    50% {
+    to {
         background-position: 100% center;
-    }
-
-    100% {
-        background-position: 0% center;
     }
 }
 

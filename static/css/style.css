@@ -2978,3 +2978,32 @@ main {
         animation: none;
     }
 }
+/* Opportunities: heading + opening link */
+.opportunity-title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+    margin-bottom: 8px;
+}
+
+.opportunity-title-row h2 {
+    margin: 0 !important;
+}
+
+.opening-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.opening-link:hover {
+    border-color: #cfcfcf;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}

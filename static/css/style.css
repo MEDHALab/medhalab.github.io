@@ -3013,3 +3013,41 @@ main {
     }
 }
 
+/* Restore the shine effect on Opportunities cards */
+.opportunity-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.opportunity-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 45%;
+    height: 200%;
+    background: linear-gradient(
+        110deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.12) 30%,
+        rgba(255, 255, 255, 0.75) 50%,
+        rgba(255, 255, 255, 0.12) 70%,
+        transparent 100%
+    );
+    transform: skewX(-20deg);
+    opacity: 0;
+    pointer-events: none;
+    transition: left 0.7s ease, opacity 0.2s ease;
+}
+
+.opportunity-card:hover::before {
+    left: 135%;
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .opportunity-card::before {
+        transition: none;
+    }
+}
+

@@ -18,10 +18,16 @@ SITE = {
 
 NEWS = [
     {
-    "date": "2026-10-01",
-    "title": "Assistant Professor Punit Kumar Named Among 35 Innovators Under 35",
-    "summary": "A proud moment for MEDHA Lab! 🎉 Assistant Professor Punit Kumar has been recognised in MIT Technology Review Asia Pacific's 35 Innovators Under 35 list for his work on developing stronger and tougher materials for extreme environments.",
-    "link": "https://www.ntu.edu.sg/mae/news-events/news/detail/assistant-professor-punit-kumar-named-among-35-innovators-under-35"
+        "date": "2026-10-12",
+        "title": "MEDHA Lab Is Hiring: Research Fellow (Physics-Informed AI and Computational Materials Mechanics)",
+        "summary": "We are pleased to announce an opening for a Research Fellow at MEDHA Lab, NTU. The role focuses on developing physics-informed AI models for the discovery of damage-tolerant structural alloys for extreme environments, integrating AI, computational mechanics, and experimental data.",
+        "link": "https://ntu.wd3.myworkdayjobs.com/Careers/job/NTU-Main-Campus-Singapore/Research-Fellow--Physics-Informed-AI-and-Computational-Materials-Mechanics-_R00026013"
+    },
+    {
+        "date": "2026-10-01",
+        "title": "Assistant Professor Punit Kumar Named Among 35 Innovators Under 35",
+        "summary": "A proud moment for MEDHA Lab! 🎉 Assistant Professor Punit Kumar has been recognised in MIT Technology Review Asia Pacific's 35 Innovators Under 35 list for his work on developing stronger and tougher materials for extreme environments.",
+        "link": "https://www.ntu.edu.sg/mae/news-events/news/detail/assistant-professor-punit-kumar-named-among-35-innovators-under-35"
     },
     {
         "date": "2026-08-20",

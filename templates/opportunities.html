@@ -1,3 +1,4 @@
+```html
 {% extends 'base.html' %}
 
 {% block content %}
@@ -16,9 +17,7 @@
 
     </div>
 
-
     <div class="opportunities-list">
-
 
         <!-- Postdoctoral Fellows -->
 
@@ -26,21 +25,29 @@
 
             <div class="opportunity-content">
 
-                <h2>
-                    Postdoctoral Fellows
-                </h2>
+                <div class="opportunity-title-row">
+                    <h2>
+                        Postdoctoral Fellows
+                    </h2>
+
+                    <a
+                        href="https://ntu.wd3.myworkdayjobs.com/Careers/job/NTU-Main-Campus-Singapore/Research-Fellow--Physics-Informed-AI-and-Computational-Materials-Mechanics-_R00026013"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="opening-badge"
+                    >
+                        <span class="opening-dot"></span>
+                        1 opening available · Click for more information →
+                    </a>
+                </div>
 
                 <p>
-                    Topics and qualifications will be announced for available
-                    positions. Stay tuned for updates on our
-                    <a
-                        href="{{ url_for('news') }}"
-                        class="opportunity-inline-link"
-                    >
-                        News
-                    </a>
-                    page and LinkedIn. Interested candidates are encouraged
-                    to send their CV and research statement.
+                    A Research Fellow position is available in Physics-Informed
+                    AI and Computational Materials Mechanics. The role focuses
+                    on developing physics-informed AI models for the discovery
+                    of damage-tolerant structural alloys for extreme
+                    environments, integrating AI, computational mechanics,
+                    and experimental data.
                 </p>
 
                 <a
@@ -63,7 +70,6 @@
             </div>
 
         </article>
-
 
         <!-- PhD Students -->
 
@@ -111,7 +117,6 @@
 
         </article>
 
-
         <!-- Master's Students / Interns -->
 
         <article class="opportunity-card">
@@ -149,9 +154,7 @@
 
         </article>
 
-
     </div>
-
 
     <!-- Information note -->
 
@@ -177,3 +180,4 @@
 </section>
 
 {% endblock %}
+```

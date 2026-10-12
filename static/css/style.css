@@ -2936,8 +2936,10 @@ main {
     }
 }
 
-/* Rainbow highlight for the hiring announcement in Latest News */
+
+/* Animated rainbow highlight for the hiring announcement in Latest News */
 .hiring-highlight {
+    display: inline;
     background: linear-gradient(
         90deg,
         #ff1744,
@@ -2946,75 +2948,37 @@ main {
         #00e676,
         #00b0ff,
         #651fff,
-        #f500ff
+        #f500ff,
+        #ff1744
     );
-    background-clip: text;
+
+    background-size: 300% 100%;
+    background-position: 0% center;
+
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+
     font-weight: 800;
-}
-/* Postdoctoral vacancy badge */
-
-.opportunity-title-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px 16px;
-    margin-bottom: 14px;
+    animation: hiringRainbowMove 4s linear infinite;
 }
 
-.opportunity-title-row h2 {
-    margin: 0;
-}
-
-.opening-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 7px 12px;
-    border: 1px solid #b7edc5;
-    border-radius: 8px;
-    background: #effcf2;
-    color: #16733a;
-    font-size: 0.82rem;
-    font-weight: 700;
-    line-height: 1.4;
-    text-decoration: none;
-    box-shadow: 0 0 0 rgba(34, 197, 94, 0);
-    animation: openingGlow 2.5s ease-in-out infinite;
-    transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.opening-badge:hover {
-    background: #dcfce5;
-    color: #115c2e;
-    transform: translateY(-1px);
-}
-
-.opening-dot {
-    width: 8px;
-    height: 8px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    background: #22c55e;
-    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
-}
-
-@keyframes openingGlow {
-    0%, 100% {
-        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.08);
+@keyframes hiringRainbowMove {
+    from {
+        background-position: 0% center;
     }
 
-    50% {
-        box-shadow: 0 0 12px 2px rgba(34, 197, 94, 0.22);
+    to {
+        background-position: 100% center;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .opening-badge {
+    .hiring-highlight {
         animation: none;
     }
 }
+
 /* Keep the vacancy badge on the same row as the heading on desktop */
 .opportunity-title-row {
     display: flex;

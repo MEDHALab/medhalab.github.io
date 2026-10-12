@@ -2980,7 +2980,7 @@ main {
 }
 
 /* ========================================
-   Opportunities: vacancy badge and card shine
+   Opportunities: vacancy badge styling
    ======================================== */
 
 /* Keep the heading and vacancy badge on one row when space allows */
@@ -3092,53 +3092,10 @@ main {
     }
 }
 
-/* Restore the diagonal shine sweep when hovering an Opportunities card */
-.opportunity-card {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-}
-
-.opportunity-card::before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    top: -50%;
-    left: -75%;
-    width: 45%;
-    height: 200%;
-    background: linear-gradient(
-        110deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.12) 30%,
-        rgba(255, 255, 255, 0.75) 50%,
-        rgba(255, 255, 255, 0.12) 70%,
-        transparent 100%
-    );
-    transform: skewX(-20deg);
-    opacity: 0;
-    pointer-events: none;
-    transition: left 0.7s ease, opacity 0.2s ease;
-}
-
-.opportunity-card:hover::before {
-    left: 135%;
-    opacity: 1;
-}
-
-/* Keep card content above the shine layer */
-.opportunity-card > * {
-    position: relative;
-    z-index: 1;
-}
-
 /* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
     .opening-badge {
         animation: none;
     }
 
-    .opportunity-card::before {
-        transition: none;
-    }
 }

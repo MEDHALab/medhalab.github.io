@@ -2940,3 +2940,21 @@ main {
         margin: 0 auto;
     }
 }
+
+/* Rainbow highlight for the hiring announcement in Latest News */
+.hiring-highlight {
+    background: linear-gradient(
+        90deg,
+        #ff1744,
+        #ff9100,
+        #ffea00,
+        #00e676,
+        #00b0ff,
+        #651fff,
+        #f500ff
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}

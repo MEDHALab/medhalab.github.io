@@ -2958,7 +2958,6 @@ main {
     -webkit-text-fill-color: transparent;
     font-weight: 800;
 }
-```css
 /* Postdoctoral vacancy badge */
 
 .opportunity-title-row {
@@ -3021,20 +3020,37 @@ main {
         animation: none;
     }
 }
+/* Keep the vacancy badge on the same row as the heading on desktop */
 .opportunity-title-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 8px;
+    flex-wrap: nowrap;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 14px;
 }
 
 .opportunity-title-row h2 {
     margin: 0;
+    flex: 0 1 auto;
 }
 
 .opening-badge {
+    display: inline-flex;
+    align-items: center;
     flex-shrink: 0;
+    white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+    .opportunity-title-row {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .opening-badge {
+        white-space: normal;
+    }
 }
 
